@@ -2,7 +2,7 @@
   "name": "learn-lingo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Alyona-Lavrin.github.io/",
+  "homepage": "https://Alyona-Lavrin.github.io/LearnLingo/",
   "dependencies": {
     "@firebase/auth": "^1.6.2",
     "@reduxjs/toolkit": "^2.2.2",
