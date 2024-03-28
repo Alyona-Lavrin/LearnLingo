@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.cd2e038f.css",
-    "main.js": "/static/js/main.5315a77b.js",
-    "static/js/366.75258637.chunk.js": "/static/js/366.75258637.chunk.js",
-    "static/js/985.287e1e6c.chunk.js": "/static/js/985.287e1e6c.chunk.js",
-    "static/js/865.67808ac8.chunk.js": "/static/js/865.67808ac8.chunk.js",
-    "static/js/520.f585547f.chunk.js": "/static/js/520.f585547f.chunk.js",
-    "static/media/child.png": "/static/media/child.6b508b3519775df9ef07.png",
-    "static/media/Union.png": "/static/media/Union.279b3cd96e0891c19eff.png",
-    "static/media/apple.svg": "/static/media/apple.572e99dcbee82864dda6509883cf203c.svg",
-    "index.html": "/index.html",
-    "static/media/ukraine.svg": "/static/media/ukraine.d34743a6d4214a7edfd037c74ed2da93.svg",
-    "main.cd2e038f.css.map": "/static/css/main.cd2e038f.css.map",
-    "main.5315a77b.js.map": "/static/js/main.5315a77b.js.map",
-    "366.75258637.chunk.js.map": "/static/js/366.75258637.chunk.js.map",
-    "985.287e1e6c.chunk.js.map": "/static/js/985.287e1e6c.chunk.js.map",
-    "865.67808ac8.chunk.js.map": "/static/js/865.67808ac8.chunk.js.map",
-    "520.f585547f.chunk.js.map": "/static/js/520.f585547f.chunk.js.map"
+    "main.css": "/LearnLingo/static/css/main.cd2e038f.css",
+    "main.js": "/LearnLingo/static/js/main.6d4be135.js",
+    "static/js/366.75258637.chunk.js": "/LearnLingo/static/js/366.75258637.chunk.js",
+    "static/js/985.287e1e6c.chunk.js": "/LearnLingo/static/js/985.287e1e6c.chunk.js",
+    "static/js/865.67808ac8.chunk.js": "/LearnLingo/static/js/865.67808ac8.chunk.js",
+    "static/js/520.f585547f.chunk.js": "/LearnLingo/static/js/520.f585547f.chunk.js",
+    "static/media/child.png": "/LearnLingo/static/media/child.6b508b3519775df9ef07.png",
+    "static/media/Union.png": "/LearnLingo/static/media/Union.279b3cd96e0891c19eff.png",
+    "static/media/apple.svg": "/LearnLingo/static/media/apple.572e99dcbee82864dda6509883cf203c.svg",
+    "index.html": "/LearnLingo/index.html",
+    "static/media/ukraine.svg": "/LearnLingo/static/media/ukraine.d34743a6d4214a7edfd037c74ed2da93.svg",
+    "main.cd2e038f.css.map": "/LearnLingo/static/css/main.cd2e038f.css.map",
+    "main.6d4be135.js.map": "/LearnLingo/static/js/main.6d4be135.js.map",
+    "366.75258637.chunk.js.map": "/LearnLingo/static/js/366.75258637.chunk.js.map",
+    "985.287e1e6c.chunk.js.map": "/LearnLingo/static/js/985.287e1e6c.chunk.js.map",
+    "865.67808ac8.chunk.js.map": "/LearnLingo/static/js/865.67808ac8.chunk.js.map",
+    "520.f585547f.chunk.js.map": "/LearnLingo/static/js/520.f585547f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.5315a77b.js"
+    "static/js/main.6d4be135.js"
   ]
 }
