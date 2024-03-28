@@ -1,9 +1,8 @@
+import PropTypes from 'prop-types';
 import { Star } from "lucide-react";
 import { Comment, ExpText, ExpWrap, Item, RatWrap, RevName } from "./TeacherItemMore.styled"
 
 export const TeacherItemMore = ({experience, reviews}) => {
-
-    console.log(reviews)
     return (
       <>
         <ExpWrap>
@@ -24,3 +23,8 @@ export const TeacherItemMore = ({experience, reviews}) => {
       </>
     );
 }
+
+TeacherItemMore.propTypes = {
+  reviews: PropTypes.array,
+  experience: PropTypes.string,
+};

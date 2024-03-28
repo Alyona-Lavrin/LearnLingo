@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import PropTypes from 'prop-types';
 import { RegisterForm } from "../RegisterForm/RegisterForm";
 import { LoginForm } from "../LoginForm/LoginForm";
 import { X } from "lucide-react";
@@ -36,4 +37,10 @@ export const RegisterModal = ({ modalIsOpen, closeModal, modal }) => {
       </ModalWrap>
     </Modal>
   );
+};
+
+RegisterModal.propTypes = {
+  closeModal: PropTypes.func,
+  modalIsOpen: PropTypes.bool,
+  modal: PropTypes.string,
 };
