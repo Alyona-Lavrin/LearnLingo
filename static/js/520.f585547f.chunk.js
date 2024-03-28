@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklearn_lingo=self.webpackChunklearn_lingo||[]).push([[520],{4520:function(n,e,u){u.r(e);var l=u(184);e.default=function(){return(0,l.jsx)("div",{children:"Not Found"})}}}]);
+//# sourceMappingURL=520.f585547f.chunk.js.map
