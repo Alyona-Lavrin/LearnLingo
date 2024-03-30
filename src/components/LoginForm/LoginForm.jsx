@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useFormik } from "formik";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import * as Yup from 'yup';
@@ -17,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 
-export const LoginForm = () => {
+export const LoginForm = ({onRequestClose}) => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate()
 
@@ -41,8 +42,9 @@ export const LoginForm = () => {
       const auth = getAuth();
       signInWithEmailAndPassword(auth, email, password)
         .then(() => {
-          toast.success('Autorization successesful!')
-          navigate('/teachers')
+          toast.success('Autorization successesful!');
+          navigate('/teachers');
+          onRequestClose();
         })
         .catch((error) => {
           toast.error(error.message)
@@ -97,4 +99,9 @@ export const LoginForm = () => {
       <RegisterBtn type="submit" >Log in</RegisterBtn>
     </Form>
   );
+};
+
+
+LoginForm.propTypes = {
+  onRequestClose: PropTypes.func,
 };
