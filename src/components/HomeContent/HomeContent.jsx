@@ -1,6 +1,6 @@
 import {
-    AppleImg,
-    ChildImg,
+  AppleImg,
+  ChildImg,
   Item,
   LeftWrap,
   LinkTo,
@@ -17,11 +17,10 @@ import {
   Wrapper,
 } from "./HomeContent.styled";
 import childImg from "../../assets/child.png";
-import mac from '../../assets/Union.png';
-import apple from '../../assets/apple.svg';
+import mac from "../../assets/Union.png";
+import apple from "../../assets/apple.svg";
 
 export const HomeContent = () => {
-
   return (
     <Main>
       <Wrapper>
@@ -61,8 +60,7 @@ export const HomeContent = () => {
           <TextNum>200 +</TextNum>
           <TextSec>Tutor nationalities</TextSec>
         </Item>
-          </List>
-          
+      </List>
     </Main>
   );
 };

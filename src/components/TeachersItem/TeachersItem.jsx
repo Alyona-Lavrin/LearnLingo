@@ -30,7 +30,7 @@ import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavoriteTeachers } from "../../redux/teachersSelectors";
 import { changeFavorite } from "../../redux/favoriteSlice";
-
+import { LessonModal } from "../LessonModal/LessonModal";
 
 export const TeachersItem = (teacher) => {
   const {
@@ -52,18 +52,22 @@ export const TeachersItem = (teacher) => {
   } = teacher;
 
   const [readMore, setReadMore] = useState(false);
+  const [isModalTeacherOpen, setIsModalTeacherOpen] = useState(false);
+
   const favoriteTeachers = useSelector(selectFavoriteTeachers);
-  
-    const isFavorite = favoriteTeachers.some((teacher) => teacher.id === id) ;
-    const [pressed, setPressed] = useState(isFavorite);
-  
-  
-  
+
+  const isFavorite = favoriteTeachers.some((teacher) => teacher.id === id);
+  const [pressed, setPressed] = useState(isFavorite);
+
   const [currentUser, setCurrentUser] = useState(false);
-  
+
   const dispatch = useDispatch();
-  
+
   const auth = getAuth();
+
+  const modalStateWrapperTeach = () => {
+    setIsModalTeacherOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -73,22 +77,18 @@ export const TeachersItem = (teacher) => {
     });
   }, [auth]);
 
-
-const handlePressed = () => {
-  if (!currentUser) {
-    toast.error("Please register or login!");
-    return;
-  }
-  setPressed((prev) => !prev);
-  dispatch(changeFavorite(teacher.teacher))
-  
-};
+  const handlePressed = () => {
+    if (!currentUser) {
+      toast.error("Please register or login!");
+      return;
+    }
+    setPressed((prev) => !prev);
+    dispatch(changeFavorite(teacher.teacher));
+  };
 
   const clickReadMore = () => {
     setReadMore(true);
   };
-
-  
 
   return (
     <CardWrapper>
@@ -156,9 +156,24 @@ const handlePressed = () => {
               <LevelsText key={idx}>#{item}</LevelsText>
             ))}
           </LevelsWrap>
-          {readMore && <TrialBtn type="button">Book trial lesson</TrialBtn>}
+          {readMore && (
+            <TrialBtn
+              type="button"
+              onClick={() => {
+                modalStateWrapperTeach();
+              }}
+            >
+              Book trial lesson
+            </TrialBtn>
+          )}
         </TitleWrap>
       </Box>
+      <LessonModal
+        modalIsOpen={isModalTeacherOpen}
+        modalStateSwapper={modalStateWrapperTeach}
+        name={name}
+        avatar_url={avatar_url}
+      />
     </CardWrapper>
   );
 };

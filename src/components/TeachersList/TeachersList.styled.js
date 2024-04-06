@@ -21,3 +21,9 @@ export const LoadMoreBtn = styled.button`
     background-color: #FFDC86;
   }
 `;
+export const NoFavorite = styled.div`
+text-align: center;
+font-size: 50px;
+font-weight: 900;
+margin-top: 50px;
+`

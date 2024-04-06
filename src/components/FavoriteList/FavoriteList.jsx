@@ -1,7 +1,11 @@
 import { useSelector } from "react-redux";
 import { selectFavoriteTeachers } from "../../redux/teachersSelectors";
 import { TeachersItem } from "../TeachersItem/TeachersItem";
-import { List, LoadMoreBtn } from "../TeachersList/TeachersList.styled";
+import {
+  List,
+  LoadMoreBtn,
+  NoFavorite,
+} from "../TeachersList/TeachersList.styled";
 import { useEffect, useState } from "react";
 
 export const FavoriteList = () => {
@@ -30,18 +34,22 @@ export const FavoriteList = () => {
   return (
     <main>
       <div>
-        <List>
-          {items.map((teacher) => (
-            <li key={teacher.id}>
-              <TeachersItem teacher={teacher} />
-            </li>
-          ))}
-          {visibleLoadMore && (
-            <LoadMoreBtn type="button" onClick={clickLoadMore}>
-              Load more
-            </LoadMoreBtn>
-          )}
-        </List>
+        {favoriteTeachers.length ? (
+          <List>
+            {items.map((teacher, i) => (
+              <li key={i}>
+                <TeachersItem teacher={teacher} />
+              </li>
+            ))}
+            {visibleLoadMore && (
+              <LoadMoreBtn type="button" onClick={clickLoadMore}>
+                Load more
+              </LoadMoreBtn>
+            )}
+          </List>
+        ) : (
+          <NoFavorite>You dont have any favorite teachers</NoFavorite>
+        )}
       </div>
     </main>
   );

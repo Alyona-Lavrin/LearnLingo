@@ -14,7 +14,6 @@ import { favoriteTeacherReducer } from "./favoriteSlice.js";
 import { teachersReducer } from "./teachersSlice.js";
 import { filtersReducer } from "./filtersSlice.js";
 
-
 const favConfig = {
   key: "favoriteTeacher",
   storage,
@@ -25,7 +24,6 @@ const rootReducer = combineReducers({
   teachers: teachersReducer,
   filters: filtersReducer,
   favoriteTeacher: persistReducer(favConfig, favoriteTeacherReducer),
-  
 });
 
 export const store = configureStore({

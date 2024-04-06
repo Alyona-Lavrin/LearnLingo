@@ -3,11 +3,15 @@ import { TeachersItem } from "../TeachersItem/TeachersItem";
 import { List, LoadMoreBtn } from "./TeachersList.styled";
 import { Filters } from "../Filters/filters";
 import { useSelector } from "react-redux";
-import { selectAllTeachers, selectIsError, selectIsLoading, selectVisibleTeachers } from "../../redux/teachersSelectors";
+import { Loader } from "../Loader";
+import {
+  selectAllTeachers,
+  selectIsError,
+  selectIsLoading,
+  selectVisibleTeachers,
+} from "../../redux/teachersSelectors";
 
 export const TeachersList = () => {
- 
-  
   const filtredTeachers = useSelector(selectVisibleTeachers);
   const allTeachers = useSelector(selectAllTeachers);
   const isLoading = useSelector(selectIsLoading);
@@ -16,19 +20,16 @@ export const TeachersList = () => {
   const [items, setItems] = useState([]);
   const [pageSize, setPageSize] = useState(8);
   const [visibleLoadMore, setVisibleLoadMore] = useState(true);
-  const [teachers, setTeachers] = useState([])
-
+  const [teachers, setTeachers] = useState([]);
 
   useEffect(() => {
     if (filtredTeachers) {
-     setTeachers(filtredTeachers)
+      setTeachers(filtredTeachers);
     } else {
-      setTeachers(allTeachers)
+      setTeachers(allTeachers);
     }
     setItems(teachers.slice(0, 4));
-    teachers.length <= 4
-      ? setVisibleLoadMore(false)
-      : setVisibleLoadMore(true);
+    teachers.length <= 4 ? setVisibleLoadMore(false) : setVisibleLoadMore(true);
   }, [teachers, filtredTeachers, allTeachers]);
 
   const clickLoadMore = () => {
@@ -42,22 +43,21 @@ export const TeachersList = () => {
 
   return (
     <div>
-      {isLoading && <div>Loading...</div>}
+      {isLoading && <Loader />}
       {isError && <div>Error</div>}
-      <Filters/>
+      <Filters />
       <List>
-        {items.map((teacher) => (
-          <li key={teacher.id}>
+        {items.map((teacher, i) => (
+          <li key={i}>
             <TeachersItem teacher={teacher} />
           </li>
         ))}
         {visibleLoadMore && (
           <LoadMoreBtn type="button" onClick={clickLoadMore}>
             Load more
-          </LoadMoreBtn>)}
+          </LoadMoreBtn>
+        )}
       </List>
-      
-      
     </div>
   );
 };

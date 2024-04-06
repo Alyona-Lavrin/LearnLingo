@@ -1,9 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit"
-
+import { createSlice } from "@reduxjs/toolkit";
 
 const INITIAL_STATE = {
-    favoriteTeacher: [],
-}
+  favoriteTeacher: [],
+};
 
 const favoriteTeacherSlice = createSlice({
   name: "favoriteTeacher",

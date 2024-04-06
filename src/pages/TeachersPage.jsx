@@ -7,12 +7,12 @@ const TeachersPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(allTeachersThunk())
-  }, [dispatch])
-  
+    dispatch(allTeachersThunk());
+  }, [dispatch]);
+
   return (
     <main>
-      <TeachersList/>
+      <TeachersList />
     </main>
   );
 };

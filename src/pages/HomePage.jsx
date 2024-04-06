@@ -1,11 +1,11 @@
 import { HomeContent } from "../components/HomeContent/HomeContent";
 
 const HomePage = () => {
-    return (
-      <>
-        <HomeContent />
-      </>
-    );
-}
+  return (
+    <>
+      <HomeContent />
+    </>
+  );
+};
 
 export default HomePage;

@@ -12,19 +12,28 @@ import {
   RegBtn,
 } from "./Header.styled";
 import { useEffect, useState } from "react";
-import { RegisterModal } from "../RegisterModal/RegisterModal";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { clearFavorite } from "../../redux/favoriteSlice";
+import { LoginForm } from "../LoginForm/LoginForm";
+import { RegisterForm } from "../RegisterForm/RegisterForm";
 
 export const Header = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [modal, setModal] = useState("");
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isRegModalOpen, setIsRegModalOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const modalStateSwapper = () => {
+    setIsLoginModalOpen((prev) => !prev);
+  };
+
+  const modalStateSwapperReg = () => {
+    setIsRegModalOpen((prev) => !prev);
+  };
 
   const auth = getAuth();
 
@@ -42,16 +51,6 @@ export const Header = () => {
     setCurrentUser(false);
     dispatch(clearFavorite());
     navigate("/");
-  };
-
-  const openModal = () => {
-    setIsOpen(true);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    document.body.style.overflow = "auto";
   };
 
   return (
@@ -78,33 +77,23 @@ export const Header = () => {
           <BtnWrap>
             <LoginBtn
               onClick={() => {
-                openModal();
-                setModal("login");
+                modalStateSwapper();
               }}
             >
               <LogIn size={20} color="#F4C550" /> Log in
             </LoginBtn>
-            <RegBtn
-              type="button"
-              onClick={() => {
-                openModal();
-                setModal("register");
-              }}
-            >
-              Registration
-            </RegBtn>
+            <RegBtn onClick={() => modalStateSwapperReg()}>Registration</RegBtn>
           </BtnWrap>
         )}
       </HeaderWrap>
-
-      {modalIsOpen && (
-        <RegisterModal
-          modalIsOpen={modalIsOpen}
-          closeModal={closeModal}
-          openModal={openModal}
-          modal={modal}
-        />
-      )}
+      <RegisterForm
+        modalIsOpen={isRegModalOpen}
+        modalStateSwapper={modalStateSwapperReg}
+      />
+      <LoginForm
+        modalIsOpen={isLoginModalOpen}
+        modalStateSwapper={modalStateSwapper}
+      />
     </Head>
   );
 };

@@ -10,15 +10,13 @@ import { FilterWrap, Label, Select } from "./filters.styled";
 export const Filters = () => {
   const allTeachers = useSelector(selectAllTeachers);
   const dispatch = useDispatch();
-  const arrValue = [10, 20, 30, 40]
+  const arrValue = [10, 20, 30, 40];
 
   const languages = allTeachers.flatMap((item) => item.languages);
   const uniqueLanguages = [...new Set(languages)];
 
   const levels = allTeachers.flatMap((item) => item.levels);
   const uniqueLevels = [...new Set(levels)];
-
-  
 
   const handlerLangChange = (e) => {
     dispatch(changeLanguage(e.target.value));
