@@ -1,13 +1,11 @@
+/* eslint-disable no-undef */
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-
-
-
 const firebaseConfig = {
-  apiKey: "AIzaSyCXqfQ1_-qCcjt79zXysGT4AfcIYgFa778",
-  projectId: "learnlingo-df2cc",
+  apiKey: process.env.REACT_APP_API_KEY,
+  projectId: process.env.REACT_APP_PROJECT_ID,
 };
 
 
