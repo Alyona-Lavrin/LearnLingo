@@ -14,6 +14,10 @@ padding-bottom: 20px;
 display: flex;
 justify-content: space-around;
 align-items: center;
+
+  @media (max-width: 1024px) {
+    display: block; 
+  }
 `
 export const LogoWrap = styled.div`
 display: flex;

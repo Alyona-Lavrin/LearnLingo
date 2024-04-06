@@ -10,6 +10,7 @@ import {
   ContRightB,
   FirstText,
   IconBox,
+  Btn,
   LastText,
   LevelsText,
   LevelsWrap,
@@ -114,13 +115,13 @@ export const TeachersItem = (teacher) => {
             <LastText>
               Price / 1 hour: <Span>{price_per_hour}$</Span>
             </LastText>
-            <button onClick={handlePressed}>
+            <Btn onClick={handlePressed}>
               {pressed ? (
                 <Heart size={26} color="#FFC531" fill="#FFC531" />
               ) : (
                 <Heart size={26} />
               )}
-            </button>
+            </Btn>
           </TopTextWrap>
         </TopContentWrap>
         <TitleWrap>

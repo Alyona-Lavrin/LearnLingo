@@ -92,6 +92,10 @@ padding: 40px 0;
   gap: 100px;
   border-radius: 30px;
   border: 1.5px dashed #f4c550;
+  
+  @media (max-width: 1024px) {
+    display: block; 
+  }
 `;
 export const Item = styled.li`
 display: flex;

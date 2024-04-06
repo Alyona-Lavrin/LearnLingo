@@ -6,6 +6,13 @@ margin: 50px auto;
 display: flex;
 flex-direction: column;
 align-items: center;
+
+@media (max-width: 1024px) {
+    display: block; 
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+  }
 `
 export const LoadMoreBtn = styled.button`
   margin-top: 32px;

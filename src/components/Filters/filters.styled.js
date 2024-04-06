@@ -6,6 +6,13 @@ display: flex;
 gap: 20px;
 margin-bottom: 50px;
 margin-top: 50px;
+
+@media (max-width: 1024px) {
+    display: block; 
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+  }
 `
 export const Label = styled.label`
   display: block;

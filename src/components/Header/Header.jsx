@@ -19,11 +19,13 @@ import { useDispatch } from "react-redux";
 import { clearFavorite } from "../../redux/favoriteSlice";
 import { LoginForm } from "../LoginForm/LoginForm";
 import { RegisterForm } from "../RegisterForm/RegisterForm";
+// import { useMediaQuery } from 'react-responsive';
 
 export const Header = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isRegModalOpen, setIsRegModalOpen] = useState(false);
   const [currentUser, setCurrentUser] = useState(false);
+  // const isTablet = useMediaQuery({ query: '(min-width: 768px)' });
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

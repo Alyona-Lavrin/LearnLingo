@@ -9,6 +9,14 @@ display: flex;
 margin-bottom: 32px;
 gap: 48px;
 
+@media (max-width: 1024px) {
+    display: block; 
+    margin: auto;
+    padding: 10px 15px;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
 `
 export const AvatarWrapp = styled.div`
 position: relative;
@@ -19,14 +27,28 @@ export const Avatar = styled.img`
   border-radius: 50%;
   border: 3px solid #fbe9ba;
   padding: 12px;
+
+  @media (max-width: 1024px) {
+    margin: auto;
+  }
 `;
+
 export const TopContentWrap = styled.div`
   display: flex;
   gap: 149px;
   height: 24px;
+  
+  @media (max-width: 1024px) {
+    display: block;
+    height: auto;
+  }
 `;
 export const TopTextWrap = styled.div`
 display: flex;
+
+@media (max-width: 1024px) {
+    display: block;
+  }
 
 `
 export const TopText = styled.p`
@@ -35,6 +57,7 @@ export const TopText = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: 150%; /* 150% */
+  margin-bottom: 10px;
   
   &::after {
     content: "|";
@@ -42,11 +65,36 @@ export const TopText = styled.p`
     margin-right: 16px;
     color: #12141733;
   }
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+
+    &::after {
+      content: "";
+      display: none;
+    }
+  }
 `;
 export const IconBox = styled.div`
 display: flex;
 gap: 8px;
 align-items: center;
+@media (max-width: 1024px) {
+    display: block;
+    svg {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+`
+export const Btn = styled.p`
+@media (max-width: 1024px) {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
 `
 export const LastText = styled.p`
   color: #121417;
@@ -55,6 +103,10 @@ export const LastText = styled.p`
   font-weight: 500;
   line-height: 150%; /* 150% */
   margin-right: 40px;
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
+
 `;
 export const FirstText = styled.p`
   color: #8a8a89;
@@ -85,6 +137,10 @@ margin-top: 8px;
 export const ContBox = styled.div`
 display: flex;
 margin-bottom: 8px;
+
+@media (max-width: 1024px) {
+  display: block;
+  }
 `
 export const ContLeft = styled.p`
   color: #8a8a89;
@@ -121,6 +177,10 @@ export const ReadMoreBtn = styled.button`
 export const LevelsWrap = styled.div`
 display: flex;
 gap: 8px;
+
+@media (max-width: 1024px) {
+    display: block;
+  }
 `
 export const LevelsText = styled.p`
   color: #121417;
@@ -132,6 +192,10 @@ export const LevelsText = styled.p`
   background: #f4c550;
   padding: 8px 12px;
   border: solid 1px #8a8a89;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 10px;
+  }
 `;
 export const Point = styled.div`
   width: 12px;
