@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/LearnLingo/static/css/main.cd2e038f.css",
-    "main.js": "/LearnLingo/static/js/main.54cc93eb.js",
+    "main.js": "/LearnLingo/static/js/main.158a54a0.js",
     "static/js/366.cc009ad5.chunk.js": "/LearnLingo/static/js/366.cc009ad5.chunk.js",
     "static/js/985.c657afe4.chunk.js": "/LearnLingo/static/js/985.c657afe4.chunk.js",
     "static/js/865.f5bf573e.chunk.js": "/LearnLingo/static/js/865.f5bf573e.chunk.js",
@@ -13,7 +13,7 @@
     "index.html": "/LearnLingo/index.html",
     "static/media/ukraine.svg": "/LearnLingo/static/media/ukraine.d34743a6d4214a7edfd037c74ed2da93.svg",
     "main.cd2e038f.css.map": "/LearnLingo/static/css/main.cd2e038f.css.map",
-    "main.54cc93eb.js.map": "/LearnLingo/static/js/main.54cc93eb.js.map",
+    "main.158a54a0.js.map": "/LearnLingo/static/js/main.158a54a0.js.map",
     "366.cc009ad5.chunk.js.map": "/LearnLingo/static/js/366.cc009ad5.chunk.js.map",
     "985.c657afe4.chunk.js.map": "/LearnLingo/static/js/985.c657afe4.chunk.js.map",
     "865.f5bf573e.chunk.js.map": "/LearnLingo/static/js/865.f5bf573e.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.54cc93eb.js"
+    "static/js/main.158a54a0.js"
   ]
 }
