@@ -66,6 +66,7 @@ export const Nav = styled.div`
   background-color: rgba(0,0,0,0.1);
   padding: 15px;
   border-radius: 15px;
+  min-width: 150px;
 }
 `
 
