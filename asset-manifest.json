@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/LearnLingo/static/css/main.cd2e038f.css",
-    "main.js": "/LearnLingo/static/js/main.2ec558e5.js",
-    "static/js/366.8c15d316.chunk.js": "/LearnLingo/static/js/366.8c15d316.chunk.js",
-    "static/js/985.5673c860.chunk.js": "/LearnLingo/static/js/985.5673c860.chunk.js",
+    "main.js": "/LearnLingo/static/js/main.54cc93eb.js",
+    "static/js/366.cc009ad5.chunk.js": "/LearnLingo/static/js/366.cc009ad5.chunk.js",
+    "static/js/985.c657afe4.chunk.js": "/LearnLingo/static/js/985.c657afe4.chunk.js",
     "static/js/865.f5bf573e.chunk.js": "/LearnLingo/static/js/865.f5bf573e.chunk.js",
     "static/js/520.f585547f.chunk.js": "/LearnLingo/static/js/520.f585547f.chunk.js",
-    "static/js/469.e4935b7b.chunk.js": "/LearnLingo/static/js/469.e4935b7b.chunk.js",
+    "static/js/469.70172b8b.chunk.js": "/LearnLingo/static/js/469.70172b8b.chunk.js",
     "static/media/child.png": "/LearnLingo/static/media/child.6b508b3519775df9ef07.png",
     "static/media/Union.png": "/LearnLingo/static/media/Union.279b3cd96e0891c19eff.png",
     "static/media/apple.svg": "/LearnLingo/static/media/apple.572e99dcbee82864dda6509883cf203c.svg",
     "index.html": "/LearnLingo/index.html",
     "static/media/ukraine.svg": "/LearnLingo/static/media/ukraine.d34743a6d4214a7edfd037c74ed2da93.svg",
     "main.cd2e038f.css.map": "/LearnLingo/static/css/main.cd2e038f.css.map",
-    "main.2ec558e5.js.map": "/LearnLingo/static/js/main.2ec558e5.js.map",
-    "366.8c15d316.chunk.js.map": "/LearnLingo/static/js/366.8c15d316.chunk.js.map",
-    "985.5673c860.chunk.js.map": "/LearnLingo/static/js/985.5673c860.chunk.js.map",
+    "main.54cc93eb.js.map": "/LearnLingo/static/js/main.54cc93eb.js.map",
+    "366.cc009ad5.chunk.js.map": "/LearnLingo/static/js/366.cc009ad5.chunk.js.map",
+    "985.c657afe4.chunk.js.map": "/LearnLingo/static/js/985.c657afe4.chunk.js.map",
     "865.f5bf573e.chunk.js.map": "/LearnLingo/static/js/865.f5bf573e.chunk.js.map",
     "520.f585547f.chunk.js.map": "/LearnLingo/static/js/520.f585547f.chunk.js.map",
-    "469.e4935b7b.chunk.js.map": "/LearnLingo/static/js/469.e4935b7b.chunk.js.map"
+    "469.70172b8b.chunk.js.map": "/LearnLingo/static/js/469.70172b8b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.2ec558e5.js"
+    "static/js/main.54cc93eb.js"
   ]
 }
