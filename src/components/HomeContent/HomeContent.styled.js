@@ -4,6 +4,9 @@ import styled from "styled-components";
 export const Main = styled.main`
 height: 100vh;
 background-color: #FFF;
+@media (max-width: 1024px) {
+    height: auto;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -11,12 +14,21 @@ display: flex;
 justify-content: center;
 gap: 24px;
 margin-bottom: 24px;
+@media (max-width: 1024px) {
+    display: block;
+  }
 `
 export const LeftWrap = styled.div`
   max-width: 720px;
   border-radius: 30px;
   background: #f8f8f8;
   padding: 98px 64px;
+  @media (max-width: 1024px) {
+    margin: auto;
+    max-width: 720px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
 `;
 export const Title = styled.h1`
   max-width: 548px;
@@ -27,6 +39,10 @@ export const Title = styled.h1`
   font-weight: 500;
   line-height: 116.667%; /* 116.667% */
   letter-spacing: -0.96px;
+  @media (max-width: 1024px) {
+    font-size: 28px;
+    max-width: inherit;
+  }
 `;
 export const Span = styled.span`
   font-style: italic;
@@ -42,6 +58,10 @@ margin-bottom: 64px;
   font-weight: 400;
   line-height: 137.5%; /* 137.5% */
   letter-spacing: -0.32px;
+  @media (max-width: 1024px) {
+    max-width: inherit;
+    margin-bottom: 40px;
+  }
 `;
 export const StartedBtn = styled.button`
   display: inline-block;
@@ -67,21 +87,48 @@ position: relative;
   height: 530px;
   border-radius: 30px;
   background-color: #fbe9ba;
+  @media (max-width: 1024px) {
+    margin: auto;
+    max-width: 720px;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
 `;
 export const ChildImg = styled.img`
 position: absolute;
 top: 80px;
 left: 114px;
+@media (max-width: 1024px) {
+    position: inherit;
+    margin: auto;
+    top: inherit;
+    left: inherit;
+    margin-bottom: 100px;
+  }
 `
 export const MacImg = styled.img`
 position: absolute;
 bottom: 0;
 left: 100px;
+@media (max-width: 1024px) {
+    margin: auto;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
 `
 export const AppleImg = styled.img`
 position: absolute;
 bottom: 55px;
-left: 255px;
+left: 263px;
+@media (max-width: 1024px) {
+  bottom: 65px;
+  left: 0;
+right: 0;
+margin: auto;
+}
 `
 export const List = styled.ul`
 max-width: 1312px;
@@ -95,11 +142,19 @@ padding: 40px 0;
   
   @media (max-width: 1024px) {
     display: block; 
+    max-width: 720px;
+    padding: 20px;
+    box-sizing: border-box;
   }
 `;
 export const Item = styled.li`
 display: flex;
 gap: 16px;
+@media (max-width: 1024px) {
+  margin: auto;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
 `
 export const TextNum = styled.p`
   color: #121417;

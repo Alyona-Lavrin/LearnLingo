@@ -12,6 +12,8 @@ margin-top: 50px;
     margin: auto;
     text-align: center;
     padding: 10px 0;
+    max-width: 250px;
+    width: calc(100% - 40px);
   }
 `
 export const Label = styled.label`
@@ -34,4 +36,9 @@ export const Select = styled.select`
   line-height: 111.111%; /* 111.111% */
   border: none;
   outline: none;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 `;

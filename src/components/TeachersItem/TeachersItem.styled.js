@@ -15,11 +15,17 @@ gap: 48px;
     padding: 10px 15px;
     margin-bottom: 50px;
     position: relative;
+    max-width: 720px;
+    width: calc(100% - 40px);
   }
 
 `
 export const AvatarWrapp = styled.div`
 position: relative;
+@media (max-width: 1024px) {
+  width: 200px;
+  margin: auto;
+}
 `
 export const Avatar = styled.img`
   width: 120px;
@@ -194,7 +200,9 @@ export const LevelsText = styled.p`
   border: solid 1px #8a8a89;
 
   @media (max-width: 1024px) {
+    margin: auto;
     margin-bottom: 10px;
+    max-width: 200px;
   }
 `;
 export const Point = styled.div`

@@ -16,6 +16,7 @@ justify-content: space-around;
 align-items: center;
 
   @media (max-width: 1024px) {
+    position: relative;
     display: block; 
   }
 `
@@ -28,12 +29,50 @@ export const NavWrap = styled.div`
 display: flex;
 align-items: center;
 gap: 28px;
+
+@media (max-width: 1024px) {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+}
 `
 export const BtnWrap = styled.div`
 display: flex;
 align-items: center;
 gap: 16px;
+
+@media (max-width: 1024px) {
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  button {
+    margin-bottom: 10px;
+  }
+}
 `
+export const Nav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 200px);
+
+@media (max-width: 1024px) {
+  display: block;
+  width: auto;
+
+  position: absolute;
+  right: 5px;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.1);
+  padding: 15px;
+  border-radius: 15px;
+}
+`
+
+export const Burger = styled.div`
+cursor: pointer;
+`
+
 export const LogoText = styled.p`
   color: #121417;
   font-size: 20px;
@@ -72,3 +111,10 @@ export const RegBtn = styled.button`
   font-weight: 700;
   line-height: 125%; /* 125% */
 `;
+
+export const TopRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+`
